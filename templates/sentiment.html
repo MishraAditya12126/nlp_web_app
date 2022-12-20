@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment Analysis</title>
+</head>
+<body>
+<form action="/perform_sentiment_analysis" method="post">
+    <h2>Sentiment Analysis</h2>
+    <label> Type your text here</label><br><br>
+    <textarea name="sentiment_text"></textarea><br><br>
+    <input type="Submit" value="Perfrom Sentiment Analysis">
+</form>
+{% if result %}
+    {% for i in result %}
+        <p>{{ i,":",result[i] }}</p>
+    {% endfor %}
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Abusive Detection</title>
+</head>
+<body>
+<form action="/perform_abusive_detection" method="post">
+    <h2>Abusive Detection</h2>
+    <label> Type your text here</label><br><br>
+    <textarea name="abusive_text"></textarea><br><br>
+    <input type="Submit" value="Perfrom Abusive Detection">
+</form>
+{% if response %}
+    <p style="color:red">{{ response }}</p>
+{% endif %}
+</body>
+</html>
